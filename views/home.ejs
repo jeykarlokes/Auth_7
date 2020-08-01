@@ -1,0 +1,119 @@
+<%- include ('partials/head') %>
+
+<style>
+  
+    #caro-img
+    {
+        width:100%;
+        height:300px;
+        /*position:absolute;*/
+        /*style="width:200%; height:200px;"*/
+    }
+    .container-fluid
+    {
+    margin-top:5px;
+    }
+  .carousel-control-prev-icon
+  {
+    margin-left:80px;
+  }
+  .flex-container {
+    display: flex;
+    outline:none;
+    border:none;
+    padding:0;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  /*margin-top:20px;*/
+  margin:20px;
+  padding:0;
+  font-size:16px;
+
+
+}
+.flex-container > img
+{
+  /*width:90%;*/
+  height:100%;
+}
+
+.flex-container
+{
+ box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#fcont
+{
+
+cursor:pointer;
+opacity: 0.8;
+transform: scale(1.1);
+transition: transform .3s;
+
+
+}
+
+</style>
+
+<div class="container-fluid">
+<p></p>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img id="caro-img" src="https://images.firstpost.com/wp-content/uploads/2019/06/Amazon-Fab-phones-fest.jpg" alt="Los Angeles" style="width:100%;">
+
+    </div>
+    <div class="carousel-item">
+      <img id="caro-img" src="https://www.jagranimages.com/images/newimg/18122019/18_12_2019-amazon-sale_19856149_8545940.jpg" alt="Chicago" style="width:100%;">
+
+    </div>
+    <div class="carousel-item">
+      <img id="caro-img" src="https://1.bp.blogspot.com/-iCCDPE6I8Jc/Vs_gW2YjCVI/AAAAAAAAAfU/uIw2zWRz8rE/s640/microsoft-surface-laptops%2B-amazon-india-offers.jpg" alt="New york" style="width:100%;">
+    </div>
+    <div class="carousel-item">
+      <img id="caro-img" src="https://insightsonindia.com/wp-content/uploads/2013/10/flip3.jpg" alt="Books-slide">
+    </div>
+    <div class="carousel-item">
+      <img id="caro-img" src="https://rukminim1.flixcart.com/merch/960/960/images/1469978918748.jpg" alt="fashion">
+    </div>
+    <div class="carousel-item">
+    <img id="caro-img" src="https://cdn.static-zoutons.com/images/originals/blog/JOKER_MOVIE_OFFERS_1569411705.jpg" alt="entertainment">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="flex-container row">
+  <% products.forEach(function(item){ %>
+    <div class="card flex-container col-2 " id="fcont" style="width:unset;">
+    <a style="outline:None;text-decoration:None;color:black;text-align:center;" href="/<%=item.product_url %>" >
+
+      <img class="card-img-top" src="<%= item.image %>" alt="<%= item.name %>">
+      <div class="card-body">
+          <h5><%= item.name %> </h5>
+          <p class="card-text"></p>
+      </div>
+      </a>
+    </div>
+<% }) %>
+
+</div>
+</div>
+
+<%- include ('partials/foot') %>

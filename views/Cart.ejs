@@ -1,0 +1,13 @@
+<%- include('partials/head') %>
+
+<h4>Cart Page of <%= name %></h4>
+
+<% cart_items.forEach(function(item){ %>
+
+<!--<li><%=item['_id'] %></li>-->
+<img src="<%= item['image'] %>" />
+<li><%=item['name'] %></li>
+<li><%=item['price'] %></li>
+<li><%=item['desc'] %></li>
+
+<% }) %>

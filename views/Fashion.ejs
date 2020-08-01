@@ -1,0 +1,68 @@
+<%- include('partials/head') %>
+
+<h1> Fashion Items</h1>
+
+<style>
+    th
+    {
+        padding:60px;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+    td
+    {
+        text-align:center;
+    }
+    .list-items
+    {
+        margin-left:10px;
+        margin-right:50px;
+
+    }
+</style>
+<div>
+<table  class="list-items" border="1">
+    <tbody>
+        <tr>
+            <th>S.No</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock Left</th>
+            <th>Sex</th>
+            <th>Quantity</th>
+        </tr>
+
+            <% items.forEach(function(item,i){ %>
+            <tr>
+                <form action="/order" method="POST">
+                <div class="item">
+
+                    <td><%= i+1 %></td>
+                    <td><img src=<%= item['image']%> alt=<%= item['Name'] %> /></td>
+                    <td><%= item['name'] %> </td>
+
+                    <td><%= item['desc'] %> </td>
+
+
+                    <td><%= item['price'] %></td>
+
+                    <td><%= item['available'] %></td>
+
+                    <td><%= item['sex'] %> </td>
+
+                    <td><%= item['quantity'] %>
+                        <a class="btn btn-primary" href="/fashions/add-to-cart/<%= item._id %>" >
+                        Add to cart
+                        </a>
+                    </td>
+            </tr>
+                </div>
+
+            <% }) %>
+    </tbody>
+</table>
+
+</div>
+

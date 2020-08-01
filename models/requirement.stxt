@@ -1,0 +1,46 @@
+user            routes
+
+profile         /user/:name/profile
+update profile  /user/:name/profile/update
+
+address  /user/:name/
+
+orders          === show ordered items of the user======= /user/:name/orders
+cancel orders   === cancel & update == /user/:name/orders/:id/cancel
+
+cart            === show cart items /user/:name/cart/
+cart update      == update cart /user/:name/cart/:id/update
+
+
+
+user
+    profile
+    orders
+    cart
+    address
+
+item features:
+
+    name
+    category of item
+    desc
+    price
+    stock quantity
+    optional
+    rating reviews
+
+    /show items to all
+
+    add-to-cart .. (----> check sign in)
+
+        ordered...   shipping,,,,       delievered...reviews
+
+    show registered users /admin admin sign on
+
+
+cart
+
+
+no of items
+
+

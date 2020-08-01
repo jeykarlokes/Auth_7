@@ -1,0 +1,35 @@
+<%- include ('partials/head') %>
+    <div class="container" style="width:50%; margin-top:20px;">
+        <h3 style="text-align:center; color:#a947e6;    ">User Address Details</h3>
+        <div class="form-group" style="margin-top:20px;">
+            <form action="/user/<%=name %>/address/" method="POST">
+
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" name="Name" placeholder="Name" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="Address" placeholder="Address Line 1">
+                    <small id="emailHelp" class="form-text text-muted">Write entire address in Address line 1</small>
+                </div>
+                <div class="form-group">
+                    <input  class="form-control" type="tel" id="phone" name="phone" placeholder="phone no" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                </div>
+
+                <div class='form-group'>
+                    <input class="form-control" type="text" name="city" placeholder="city" />
+                </div>
+
+                <div class="form-group">
+                    <input  class="form-control" name="country" type="text" placeholder="Country" />
+                </div>
+
+                <button type="submit" class="btn btn-success">Add Address </button>
+            </form>
+        </div>
+    </div>
+
+    <%- include ('partials/foot') %>

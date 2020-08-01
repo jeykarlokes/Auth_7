@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Header</title>
+    <!---Bootstrap 4->-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <style>
+          body{
+      background-color:white;
+    }
+    #user-hover :hover
+    {
+        color:blue;
+        
+    }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#f1f1f1;">
+        <a class="navbar-brand" href="/home">
+    <img src="data:image/png;base64,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" width="30" height="30" alt="">
+  </a>
+        <a class="navbar-brand" href="/home">Shop Kart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Products Categories
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/products/e-devices">E-devices</a>
+                        <a class="dropdown-item" href="/fashions">Fashions</a>
+                        <!--<div class="dropdown-divider"></div>-->
+                        <a class="dropdown-item" href="/products/books">Books</a>
+                        <a class="dropdown-item" href="/products/entertainments">Entertainment</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="false">Contact</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+            </form>
+            <ul class="nav justify-content-end">
+                    <% if (!currentUser){ %>
+                        <li class="nav-item">
+                            <a style="color:black" class="nav-link" href="/login">Sign in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color:black" class="nav-link" href="/register">Sign Up</a>
+                        </li>
+                        
+                    <% } else { %>
+                        <li class="nav-item" id="user-hover">
+                            
+                            <a  style="color:black" class="nav-link" href="/user/<%=currentUser.username %>/address/new" >
+                                <svg width="1.5em" height="1em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                </svg>
+                                <Strong><%= currentUser.username %></Strong> 
+                            </a></li>
+                            
+                            <li class="nav-item">
+                                <a style="color:black" class="nav-link" href="/user/<%=currentUser.username %>/cart" > 
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                                </svg>
+                                Cart</a>
+                            </li>
+                        <li class="nav-item">
+                            <a style="color:black" class="nav-link" href="/logout">Logout</a>
+                        </li>
+                    <% } %>
+            </ul>
+                
+                
+        </div>
+    </nav>
